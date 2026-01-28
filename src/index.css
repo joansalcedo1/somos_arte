@@ -1,0 +1,8 @@
+/* Importas Tailwind */
+@import "tailwindcss";
+
+/* Aquí configuras tu tema (esto reemplaza al tailwind.config.js) */
+@theme {
+  /* Le dices que la fuente "sans" (la predeterminada) sea Montserrat */
+  --font-sans: "Montserrat", sans-serif; 
+}
