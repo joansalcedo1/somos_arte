@@ -7,7 +7,7 @@ function nav() {
                 </div>
                 <div className="flex flex-row justify-between gap-5 w-1/2">
                     <div className="cursor-pointer hover:bg-amber-300 hover:text-white rounded px-3">
-                        Sobre nosotros
+                        Sobre nosotros mano
                     </div>
                     <div className="cursor-pointer hover:bg-amber-300 hover:text-white rounded px-3">
                         Galeria de fotos
