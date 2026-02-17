@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Hero from './section/Hero'
-import Nav from './componentsd/nav'
+import Nav from './componentsd/Nav'
 import Eventos from './section/Eventos'
 function App() {
   const [count, setCount] = useState(0)

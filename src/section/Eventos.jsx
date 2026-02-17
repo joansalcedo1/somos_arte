@@ -1,59 +1,57 @@
 import Carrusel from "../componentsd/Carrusel"
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Eventos() {
+    const [openIndex, setOpenIndex] = useState(0);
+    const divVariants = {
+
+    }
+    const servicios = [
+        { id: 1, titulo: "Psicología y terapia ocupacional", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null },
+        { id: 2, titulo: "Refuerzo académico", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null },
+        { id: 3, titulo: "Reales grupo trío", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null },
+        { id: 4, titulo: "Estudio de grabación", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null },
+    ]
     return (
-        <section className="h-screen bg-amber-300 flex flex-col items-center p-6">
-            <div id="portafolio_dad" className="w-full h-full  flex-1 flex rounded-4xl bg-green-400">
-                <div className="flex-1 bg-white rounded-4xl">
-                    <div className="group h-1/4 flex flex-col">
-                        {/*Truco para hacer la esquina redondeada del bloque azul sin afectar el bloque blanco*/}
-                        <div className="flex flex-row bg-cyan-900 rounded-t-3xl text-white w-full h-10 ">
-                            <p className="px-4 py-2 bg-cyan-400 rounded-tl-2xl">
-                                01
-                            </p>
-                            <p className="py-2 px-3">
-                                Psicología y terapia ocupacional
-                            </p>
-                        </div>
-                        <button className="">
-                            Ver más detalles
-                        </button>
+        <section className="h-screen bg-amber-300 flex flex-col items-center p-6 ">
+            <div id="portafolio_dad" className="w-full h-full flex-1 flex rounded-4xl bg-green-400 m-10">
+                <div className="flex-1 flex flex-col">
 
-                    </div>
-                    <div className="group h-1/4 flex flex-col">
-                        {/*Truco para hacer la esquina redondeada del bloque azul sin afectar el bloque blanco*/}
-                        <div className="flex flex-row bg-cyan-900 rounded-t-3xl text-white w-full h-10 ">
-                            <p className="px-4 py-2 bg-cyan-400 rounded-tl-2xl">01</p>
-                            <p className="py-2 px-3"> refuerzo academico </p>
-                        </div>
-                        <button className="">
-                            Ver más detalles
-                        </button>
 
-                    </div>
-                    <div className="group h-1/4 flex flex-col">
-                        {/*Truco para hacer la esquina redondeada del bloque azul sin afectar el bloque blanco*/}
-                        <div className="flex flex-row bg-cyan-900 rounded-t-3xl text-white w-full h-10 ">
-                            <p className="px-4 py-2 bg-cyan-400 rounded-tl-2xl">03</p>
-                            <p className="py-2 px-3"> Reales grupo trío </p>
+                    {servicios.map((item, index) => (
+                        <div key={item.id} className="flex-1 flex flex-col bg-white rounded-4xl">
+                            {/*Truco para hacer la esquina redondeada del bloque azul sin afectar el bloque blanco*/}
+                            <div className="flex items-center bg-cyan-900 rounded-t-3xl text-white">
+                                <p className="px-4 py-2 bg-cyan-400 rounded-tl-2xl">
+                                    {item.id < 10 ? `0${item.id}` : item.id}
+                                </p>
+                                <h3 className="text-xl font-bold ">{item.titulo}</h3>
+                            </div>
+                            <div className="">
+                                <button className="bg-blue-600 hover:bg-blue-700 py-4  px-4 transition-colors text-white rounded-full text-xs font-bold uppercase cursor-pointer">
+                                    ver más detalles
+                                </button>
+                            </div>
+                            <AnimatePresence>
+                                {openIndex === index && (
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        className="flex flex-col items-center justify-center flex-1 p-4"
+                                    >
+                                        <div className="mt-4 bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-2 rounded-full shadow-lg">
+                                            <button className="text-white text-xs font-bold uppercase cursor-pointer">
+                                                ver más detalles
+                                            </button>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
-                        <button className="">
-                            Ver más detalles
-                        </button>
+                    ))}
 
-                    </div>
-                    <div className="group h-1/4 flex flex-col items-center shadow-t-3xl"> {/* Agregamos items-center aquí */}
-                        <div className="flex flex-row bg-cyan-900 rounded-t-3xl text-white w-full h-10 ">
-                            <p className="px-4 py-2 bg-cyan-400 rounded-tl-2xl">04</p>
-                            <p className="py-2 px-3 font-bold uppercase text-sm tracking-wider">Estudio de grabación</p>
-                        </div>
-
-                        <div className="mt-4 bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-1 rounded-full">
-                            <button className="text-white text-xs font-bold uppercase cursor-pointer">
-                                ver más detalles
-                            </button>
-                        </div>
-                    </div>
 
 
                 </div>
