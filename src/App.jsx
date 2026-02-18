@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Hero from './section/Hero'
 import Nav from './componentsd/Nav'
-import Eventos from './section/Eventos'
+import Servicios from './section/Servicios'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <Nav />
       <Hero />
-      <Eventos />
+      <Servicios />
     </>
   )
 }
