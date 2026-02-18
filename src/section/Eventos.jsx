@@ -5,13 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Eventos() {
     const [openIndex, setOpenIndex] = useState(0);
     const divVariants = {
-
+        open: { opacity: 1, height: "auto", transition: { duration: 0.3 } },
+        closed: { opacity: 0, height: 0, transition: { duration: 0.3 } },
     }
     const servicios = [
-        { id: 1, titulo: "Psicología y terapia ocupacional", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null },
-        { id: 2, titulo: "Refuerzo académico", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null },
-        { id: 3, titulo: "Reales grupo trío", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null },
-        { id: 4, titulo: "Estudio de grabación", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null },
+        { id: 1, titulo: "Psicología y terapia ocupacional", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null,contenidoOculto:"para niños de 3 a 5 años" },
+        { id: 2, titulo: "Refuerzo académico", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null,contenidoOculto:"para niños de 5 a 7 años" },
+        { id: 3, titulo: "Reales grupo trío", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null,contenidoOculto:"para niños de 7 a 10 años" },
+        { id: 4, titulo: "Estudio de grabación", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null, contenidoOculto:"para niños de 10 a 12 años"},
     ]
     return (
         <section className="h-screen bg-amber-300 flex flex-col items-center p-6 ">
@@ -20,18 +21,13 @@ export default function Eventos() {
 
 
                     {servicios.map((item, index) => (
-                        <div key={item.id} className="flex-1 flex flex-col bg-white rounded-4xl">
+                        <div key={item.id} className={`flex-1 flex flex-col bg-white rounded-4xl ${openIndex === index ? "shadow-lg" : ""} mb-6 cursor-pointer transition-shadow`} onClick={() => setOpenIndex(openIndex === index ? null : index)}>
                             {/*Truco para hacer la esquina redondeada del bloque azul sin afectar el bloque blanco*/}
                             <div className="flex items-center bg-cyan-900 rounded-t-3xl text-white">
                                 <p className="px-4 py-2 bg-cyan-400 rounded-tl-2xl">
                                     {item.id < 10 ? `0${item.id}` : item.id}
                                 </p>
                                 <h3 className="text-xl font-bold ">{item.titulo}</h3>
-                            </div>
-                            <div className="">
-                                <button className="bg-blue-600 hover:bg-blue-700 py-4  px-4 transition-colors text-white rounded-full text-xs font-bold uppercase cursor-pointer">
-                                    ver más detalles
-                                </button>
                             </div>
                             <AnimatePresence>
                                 {openIndex === index && (
@@ -41,10 +37,8 @@ export default function Eventos() {
                                         exit={{ opacity: 0 }}
                                         className="flex flex-col items-center justify-center flex-1 p-4"
                                     >
-                                        <div className="mt-4 bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-2 rounded-full shadow-lg">
-                                            <button className="text-white text-xs font-bold uppercase cursor-pointer">
-                                                ver más detalles
-                                            </button>
+                                        <div className="">
+                                            {item.contenidoOculto}
                                         </div>
                                     </motion.div>
                                 )}
