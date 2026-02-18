@@ -1,94 +1,78 @@
-    import React, { useState, useEffect } from 'react';
-    import { motion } from 'framer-motion';
-    import Tag from "./Tag";
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-    const Carrusel = ({ items }) => {
-        const [currentIndex, setCurrentIndex] = useState(0);
+const Carrusel = ({ items }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-        useEffect(() => {
-            const interval = setInterval(() => {
-                setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-            }, 5000);
-            return () => clearInterval(interval);
-        }, [items.length]);
+    // Auto-play cada 5 segundos
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [currentIndex, items.length]); // Añadimos currentIndex para que el intervalo se reinicie al navegar manualmente
 
-        return (
-            <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
-                {/* Contenedor del Carrusel */}
-                <motion.div
-                    className="flex"
-                    animate={{ x: `-${currentIndex * 100}%` }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                >
-                    {items.map((item, i) => (
-                        <div key={i} id="card-hero" className="min-w-full px-4">
-                            <div className="bg-gray-200 rounded-3xl overflow-hidden relative">
-                                {/* Contenedor Superior: Título + Píldoras */}
-                                <div className="flex justify-between items-start">
+    // Funciones de navegación
+    const prevSlide = () => {
+        setCurrentIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
+    };
 
-                                    {/* Info Izquierda */}
-                                    <div className="p-8 pb-4">
-                                        <h3 className="text-3xl font-bold text-black">{item.titulo}</h3>
-                                        <p className="text-gray-500 text-lg">{item.edad}</p>
-                                    </div>
+    const nextSlide = () => {
+        setCurrentIndex((prev) => (prev + 1) % items.length);
+    };
 
-                                    {/* Sección Blanca de Píldoras */}
-                                    <div className="relative bg-white p-4 rounded-bl-3xl">
-                                        {/* --- TRUCO: Esquinas Invertidas --- */}
-                                        {/* Esquina superior izquierda (afuera del bloque blanco) */}
-                                        <div className="absolute top-0 -left-6 w-6 h-6 bg-white">
-                                            <div className="w-full h-full bg-gray-200 rounded-tr-3xl"></div>
-                                        </div>
-                                        {/* Esquina inferior derecha (afuera del bloque blanco) */}
-                                        <div className="absolute -bottom-6 right-0 w-6 h-6 bg-white">
-                                            <div className="w-full h-full bg-gray-200 rounded-tr-3xl"></div>
-                                        </div>
-                                        {/* ---------------------------------- */}
+    if (!items || items.length === 0) return null;
 
-                                        {/* Grid de Píldoras */}
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <Tag color="bg-red-500" text="Música" />
-                                            <Tag color="bg-yellow-500" text="Teatro" />
-                                            <Tag color="bg-green-600" text="Baile" />
-                                            <Tag color="bg-blue-800" text="Artes plásticas" />
-                                        </div>
-                                    </div>
-                                </div>
+    return (
+        <div className="relative w-full mx-auto overflow-hidden group">
+            {/* Contenedor del Carrusel */}
+            <motion.div
+                className="flex"
+                animate={{ x: `-${currentIndex * 100}%` }}
+                transition={{ type: "spring", stiffness: 200, damping: 25 }}
+            >
+                {items.map((item, i) => (
+                    <div key={i} className="min-w-full aspect-video">
+                        <img src={item} alt={`Imagen ${i}`} className="w-full h-full object-cover" />
+                    </div>
+                ))}
+            </motion.div>
 
-                                {/* Contenedor Inferior: Imagen/Video + Descripción */}
-                                <div className="p-8 pt-0 grid grid-cols-2 gap-6">
-                                    <div className="aspect-video bg-gray-300 rounded-xl border-2 border-gray-400 flex items-center justify-center italic">
-                                        {item.imagen ? item.imagen : "Sin imagen"}
-                                    </div>
-                                    <div className="flex flex-col justify-between py-2">
-                                        <p className="text-gray-700 leading-relaxed">
-                                            {item.desciprcion}
-                                        </p>
-                                        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors w-max">
-                                            ¡Agenda ya!
-                                            <div id="id_oculto" className="hidden">
-                                                {item.id}
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </motion.div>
+            {/* BOTONES CONTROLADORES */}
+            {/* Botón Izquierda */}
+            <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
 
-                {/* Indicadores (Puntos) 
-                <div className="flex justify-center mt-4 gap-2">
-                    {items.map((_, i) => (
-                        <div
-                            key={i}
-                            className={`h-2 w-2 rounded-full transition-all ${currentIndex === i ? "bg-blue-600 w-4" : "bg-gray-300"
-                                }`}
-                        />
-                    ))}
-                </div>*/}
+            {/* Botón Derecha */}
+            <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+
+            {/* Indicadores (Puntos) */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {items.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => setCurrentIndex(i)}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                            currentIndex === i ? "bg-white w-6" : "bg-white/50 w-2"
+                        }`}
+                    />
+                ))}
             </div>
-        );
-    }
+        </div>
+    );
+}
 
-    export default Carrusel;
+export default Carrusel;

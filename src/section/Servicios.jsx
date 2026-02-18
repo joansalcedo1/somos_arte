@@ -5,12 +5,9 @@ import { button, div } from "framer-motion/client";
 
 export default function Servicios() {
     const [openIndex, setOpenIndex] = useState(0);
-    const divVariants = {
-        open: { opacity: 1, height: "auto", transition: { duration: 0.3 } },
-        closed: { opacity: 0, height: 0, transition: { duration: 0.3 } },
-    }
+
     const servicios = [
-        { id: 1, titulo: "Psicología y terapia ocupacional", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance.", imagen: null, contenidoOculto: "para niños de 3 a 5 años" },
+        { id: 1, titulo: "Psicología y terapia ocupacional", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental y emocional", imagen: null, contenidoOculto: "para niños de 3 a 5 años" },
         { id: 2, titulo: "Refuerzo académico", desciprcion: "Tenemos abierto un espacio de apoyo  académico donde los niños de nivel de básica primaria  podrán realizar refuerzo en el área de matemáticas, literatura e inglés y acompañamiento en tareas", imagen: null, contenidoOculto: "para niños de 5 a 7 años" },
         { id: 3, titulo: "Reales grupo trío", desciprcion: "agrupacion musical reconocida en Cali por incorporar a su instrumentacion el piano e instrumentos de cuerda. A lo largo de su carrera se han presentado en diferentes festivales importatnes municipales", imagen: null, contenidoOculto: "para niños de 7 a 10 años" },
         { id: 4, titulo: "Estudio de grabación", desciprcion: "Somos arte cuenta con un estudio de grabación aquí encontraras la mejor asesoría y todo lo necesario para hacer realidad tu creación musical.", imagen: null, contenidoOculto: "para niños de 10 a 12 años" },
@@ -18,8 +15,8 @@ export default function Servicios() {
     console.log(openIndex)
     return (
         <section className="h-screen flex bg-amber-300 items-center px-15 py-10 ">
-            <div id="portafolio_dad" className="w-full  flex-1 flex rounded-4xl bg-green-400 ">
-                <div className="p-4 gap-4 flex flex-col"> {/* Agregué gap para separar los bloques */}
+            <div id="portafolio_dad" className="w-full  flex-3 flex rounded-4xl bg-green-400 ">
+                <div className="p-4 gap-4 flex  flex-col"> {/* Agregué gap para separar los bloques */}
                     {servicios.map((item, index) => (
                         <div key={item.id} className={` bg-white rounded-4xl ${openIndex === index ? "p-0 shadow-xl flex-2" : "flex-0"} transition-all duration-400 cursor-pointer`} onClick={() => setOpenIndex(openIndex === index ? null : index)}>
                             {/*Truco para hacer la esquina redondeada del bloque azul sin afectar el bloque blanco*/}
@@ -83,9 +80,11 @@ export default function Servicios() {
                     </div>
                 </div>
             </div>
-            <div className="m-4 ps-6">
-                <h4 className="font-bold text-6xl"> Servicios </h4>
-                <p className="pb-5" >Atrevete a sorprender a tus hijos con nuestros servicios</p>
+            <div className="flex-1 text-center ms-4">
+                <h4 className="text-4xl font-bold">Servicios</h4>
+                <p className="font-light">
+                    Atrevete a sorprender a tu hijo con el arte
+                </p>
             </div>
         </section>
     )

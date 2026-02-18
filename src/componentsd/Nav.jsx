@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useMotionValueEvent, useScroll, motion, AnimatePresence } from "framer-motion";
-import Tag from "./Tag";
+
 
 function Nav() { 
     const [isScrolled, setIsScrolled] = useState(false);
