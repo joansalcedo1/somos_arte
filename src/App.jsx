@@ -5,6 +5,7 @@ import Servicios from './section/Servicios'
 import Eventos from './section/Eventos'
 import Contactanos from './section/Contactanos'
 import Contacto from './layout/Contacto'
+import Location from './section/Location'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Eventos />
       <Contactanos/>
       <Contacto/>
+      <Location/>
     </>
   )
 }
