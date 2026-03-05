@@ -1,5 +1,5 @@
-export default function WhyUs(){
-    return(
-        
+export default function WhyUs(){    
+    return( 
+        <></>
     )
 }
