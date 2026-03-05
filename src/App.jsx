@@ -4,6 +4,9 @@ import Nav from './componentsd/Nav'
 import Servicios from './section/Servicios'
 import Eventos from './section/Eventos'
 import Contactanos from './section/Contactanos'
+import Contacto from './layout/Contacto'
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -14,6 +17,7 @@ function App() {
       <Servicios />
       <Eventos />
       <Contactanos/>
+      <Contacto/>
     </>
   )
 }

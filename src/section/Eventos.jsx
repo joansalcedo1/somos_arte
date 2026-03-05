@@ -14,7 +14,7 @@ export default function Eventos() {
     ]
     return (
         <>
-            <section className="relative bg-lime-400 grid grid-cols-2 px-15 py-10 gap-6">
+            <section className="h-screen relative bg-lime-400 grid grid-cols-2 px-15 py-10 gap-6">
                 <div className="p-5 sticky self-start top-20 h-fit">
                     <p className=" text-sm font-light font-sans">Conoce nuestros eventos</p>
                     <div className="py-5 sm:text-4xl md:text-5xl font-extrabold leading-tight text-white uppercase tracking-tighter ">

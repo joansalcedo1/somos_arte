@@ -1,18 +1,18 @@
 import Carrusel from "../componentsd/Carrusel"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { button, div } from "framer-motion/client";
-
+import serviciosData from "../data/servicios.json"
 export default function Servicios() {
     const [openIndex, setOpenIndex] = useState(0);
+    const [servicios, setServicios] = useState(serviciosData)
 
-    const servicios = [
-        { id: 1, titulo: "Psicología y terapia ocupacional", desciprcion: "Contamos con servicios profesionales que contribuyen a la salud mental y emocional", imagen: null, contenidoOculto: "para niños de 3 a 5 años" },
-        { id: 2, titulo: "Refuerzo académico", desciprcion: "Tenemos abierto un espacio de apoyo  académico donde los niños de nivel de básica primaria  podrán realizar refuerzo en el área de matemáticas, literatura e inglés y acompañamiento en tareas", imagen: null, contenidoOculto: "para niños de 5 a 7 años" },
-        { id: 3, titulo: "Reales grupo trío", desciprcion: "agrupacion musical reconocida en Cali por incorporar a su instrumentacion el piano e instrumentos de cuerda. A lo largo de su carrera se han presentado en diferentes festivales importatnes municipales", imagen: null, contenidoOculto: "para niños de 7 a 10 años" },
-        { id: 4, titulo: "Estudio de grabación", desciprcion: "Somos arte cuenta con un estudio de grabación aquí encontraras la mejor asesoría y todo lo necesario para hacer realidad tu creación musical.", imagen: null, contenidoOculto: "para niños de 10 a 12 años" },
-    ]
-    console.log(openIndex)
+    useEffect(() => {
+        // Simulamos una llamada a una API para obtener los servicios
+        // En este caso, simplemente usamos los datos importados
+        setServicios(serviciosData);
+    }, []);
+
     return (
         <section className="h-screen flex flex-col bg-amber-300 items-center px-15 py-10 ">
             <h3 className="text-center text-2xl font-bold">Nuestros Servicios</h3>
@@ -59,7 +59,9 @@ export default function Servicios() {
                 </div>
                 <div className="flex-2 rounded-e-4xl bg-cyan-900 ps-4 pt-6 text-white"> {/* Agregué text-white por el fondo oscuro */}
                     <h4 className="font-bold text-xl text-center ">
-                        {openIndex !== null ? servicios[openIndex].titulo : "Nuestros servicios"}
+                        {openIndex !== null && servicios[openIndex]
+                            ? servicios[openIndex].titulo
+                            : "Selecciona un servicio"}
                     </h4>
 
                     <div className="p-4 flex flex-col items-center"> {/* Flex col para apilar en columna */}

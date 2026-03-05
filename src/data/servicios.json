@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "titulo": "Psicología y terapia ocupacional",
+        "descripcion": "Contamos con servicios profesionales que contribuyen a la salud mental y emocional",
+        "imagen": null,
+        "contenidoOculto": "para niños de 3 a 5 años"
+    },
+    {
+        "id": 2,
+        "titulo": "Refuerzo académico",
+        "descripcion": "Tenemos abierto un espacio de apoyo  académico donde los niños de nivel de básica primaria  podrán realizar refuerzo en el área de matemáticas, literatura e inglés y acompañamiento en tareas",
+        "imagen": null,
+        "contenidoOculto": "para niños de 5 a 7 años"
+    },
+    {
+        "id": 3,
+        "titulo": "Reales grupo trío",
+        "descripcion": "agrupacion musical reconocida en Cali por incorporar a su instrumentacion el piano e instrumentos de cuerda. A lo largo de su carrera se han presentado en diferentes festivales importatnes municipales",
+        "imagen": null,
+        "contenidoOculto": "para niños de 7 a 10 años"
+    },
+    {
+        "id": 4,
+        "titulo": "Academia de música",
+        "descripcion": "Somos arte cuenta con una gran experiencia en el campo de la música, por eso ofrecemos clases de piano, guitarra, violín y canto para niños y niñas de todas las edades",
+        "imagen": null,
+        "contenidoOculto": "para niños de 10 a 12 años"
+    }
+]

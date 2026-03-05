@@ -31,18 +31,6 @@ export default function Img_hero() {
                 <div className="absolute w-6 h-6 top-0 left-25 bg-white">
                     <div className="w-full h-full bg-gray-500 rounded-tl-2xl"> </div>
                 </div>
-
-                <div className="absolute bottom-5 right-8">
-                    <button className="bg-black hover:bg-gray-900 text-white px-4 py-2 rounded">Facebook</button>
-                </div>
-
-                <div className="absolute bottom-18 right-8">
-                    <button className="bg-black hover:bg-gray-900 text-white px-4 py-2 rounded">Whatsapp</button>
-                </div>
-
-                <div className="absolute bottom-32 right-8">
-                    <button className="bg-black hover:bg-gray-900 text-white px-4 py-2 rounded">Instagram </button>
-                </div>
             </div>
         </>
     )
