@@ -1,7 +1,7 @@
 export default function Location() {
     return (
         <>
-            <section className="px-15 py-10 ">
+            <section className="px-20 py-10 ">
                 <div className="h-full w-full flex gap-5 ">
                     <div className="flex-1 flex flex-col justify-center items-start">
                         <h3 className="py-5 sm:text-4xl md:text-5xl font-extrabold leading-tight  tracking-tighter">Nuestra Ubicación</h3>

@@ -2,29 +2,33 @@
     {
         "id": 1,
         "titulo": "Psicología y terapia ocupacional",
-        "descripcion": "Contamos con servicios profesionales que contribuyen a la salud mental y emocional",
+        "descripcion": "En nuestro compromiso por el desarrollo y la formación integral de la comunidad cuenta con servicios profesionales que contribuyen a la salud mental, emocional y académica, ofreciendo el mejor servicio a tu alcance",
         "imagen": null,
-        "contenidoOculto": "para niños de 3 a 5 años"
+        "edad": "para niños de 3 a 5 años",
+        "contenidoOculto": "Ofrecemos terapia ocupacional para niños con dificultades en el desarrollo motor, sensorial o cognitivo, ayudándolos a mejorar sus habilidades y alcanzar su máximo potencial."
     },
     {
         "id": 2,
         "titulo": "Refuerzo académico",
         "descripcion": "Tenemos abierto un espacio de apoyo  académico donde los niños de nivel de básica primaria  podrán realizar refuerzo en el área de matemáticas, literatura e inglés y acompañamiento en tareas",
         "imagen": null,
-        "contenidoOculto": "para niños de 5 a 7 años"
+        "edad": "para niños de 5 a 7 años",
+        "contenidoOculto": "Refuerzo en competencias literarias, matematicas, inglés y mucho más"
     },
     {
         "id": 3,
         "titulo": "Reales grupo trío",
         "descripcion": "agrupacion musical reconocida en Cali por incorporar a su instrumentacion el piano e instrumentos de cuerda. A lo largo de su carrera se han presentado en diferentes festivales importatnes municipales",
         "imagen": null,
-        "contenidoOculto": "para niños de 7 a 10 años"
+        "edad":"todas las edades",
+        "contenidoOculto": "Música de los 60 y 70, boleros, música colombiana, tropical bailable y las que tu pidas"
     },
     {
         "id": 4,
         "titulo": "Academia de música",
         "descripcion": "Somos arte cuenta con una gran experiencia en el campo de la música, por eso ofrecemos clases de piano, guitarra, violín y canto para niños y niñas de todas las edades",
         "imagen": null,
-        "contenidoOculto": "para niños de 10 a 12 años"
+        "edad": "todas las edades",
+        "contenidoOculto": "Se realiza en los tiempos de vacaciones y receso escolar y pretende por medio de los diferentes lenguajes artísticos ser una herramienta de recreación"
     }
 ]

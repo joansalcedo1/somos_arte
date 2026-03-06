@@ -1,8 +1,35 @@
 /* Importas Tailwind */
 @import "tailwindcss";
 
-/* Aquí configuras tu tema (esto reemplaza al tailwind.config.js) */
+/* SISTEMA DE COLORES - ACADEMIA SOMOS ARTE */
+/* En Tailwind v4, @theme solo acepta custom properties CSS */
 @theme {
-  /* Le dices que la fuente "sans" (la predeterminada) sea Montserrat */
-  --font-sans: "Montserrat", sans-serif; 
+  /* Fuente por defecto */
+  --font-sans: "Montserrat", sans-serif;
+  
+  /* ========== COLORES PRIMARIOS (Amarillo/Dorado) ========== */
+  --color-accent-primary: #FCB900;        /* Amarillo Dorado - Principal */
+  --color-accent-primary-hover: #E8B923;  /* Hover/Active states */
+  --color-accent-gold: #D4AF37;           /* Oro más oscuro - bordes, líneas */
+  
+  /* ========== COLORES SECUNDARIOS ========== */
+  --color-accent-yellow: #FDD835;         /* Amarillo claro */
+  --color-accent-yellow-light: #FFED4E;   /* Amarillo muy claro */
+  
+  /* ========== TIERRA/MARRÓN ========== */
+  --color-accent-earth: #8B6F47;          /* Marrón tierra - elegancia */
+  --color-accent-earth-dark: #654321;     /* Marrón oscuro - énfasis */
+  
+  /* ========== COLORES NEUTROS ========== */
+  --color-neutral-white: #FFFFFF;         /* Blanco puro */
+  --color-neutral-light: #F8F9FA;         /* Gris muy claro */
+  --color-neutral-dark: #333333;          /* Gris oscuro/Negro */
+  --color-neutral-gray: #666666;          /* Gris intermedio */
+  --color-neutral-border: #DDDDDD;        /* Gris para bordes */
+  
+  /* ========== COLORES DE ESTADO ========== */
+  --color-success: #4CAF50;               /* Verde - Éxito */
+  --color-warning: #FF9800;               /* Naranja - Advertencia */
+  --color-error: #F44336;                 /* Rojo - Error */
+  --color-info: #2196F3;                  /* Azul - Información */
 }

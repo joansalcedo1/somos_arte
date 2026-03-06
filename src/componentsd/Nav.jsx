@@ -19,18 +19,18 @@ function Nav() {
                 </div>
 
                 <div className="flex flex-row justify-between gap-5 w-1/2">
-                    {/* ... tus links ... */}
-                    <div className="cursor-pointer hover:bg-amber-300 hover:text-white rounded px-3 transition-colors">
-                        Sobre nosotros mano
+                    {/* Links con hover states consistentes en dorado */}
+                    <div className="cursor-pointer hover:bg-[#E8B923] hover:text-white rounded px-3 py-2 transition-all duration-300">
+                        Sobre nosotros
                     </div>
-                    <div className="cursor-pointer hover:bg-amber-300 hover:text-white rounded px-3 transition-colors">
-                        Galería de fotos
+                    <div className="cursor-pointer hover:bg-[#E8B923] hover:text-white rounded px-3 py-2 transition-all duration-300">
+                        Galería
                     </div>
-                    <div className="cursor-pointer hover:bg-amber-300 hover:text-white rounded px-3 transition-colors">
-                        Somos estilo
+                    <div className="cursor-pointer hover:bg-[#E8B923] hover:text-white rounded px-3 py-2 transition-all duration-300">
+                        Servicios
                     </div>
-                    <div className="cursor-pointer hover:bg-amber-300 hover:text-white rounded px-3 transition-colors">
-                        Otros servicios
+                    <div className="cursor-pointer hover:bg-[#E8B923] hover:text-white rounded px-3 py-2 transition-all duration-300">
+                        Contacto
                     </div>
                 </div>
             </nav>
