@@ -51,7 +51,16 @@ export default function Contactanos() {
 
                     </form>
                 </div>
-                <div className="flex items-center">
+                <div className="flex flex-col justify-center items-center p-5">
+                    <div className="py-5 sm:text-4xl md:text-5xl font-extrabold leading-tight text-white uppercase tracking-tighter">
+                        <h1>Dejanos saber qué necesitas</h1>
+                    </div>
+                    <p>
+                        Si tienes alguna pregunta, inquietud o simplemente quieres saber más sobre nuestros servicios, 
+                        no dudes en contactarnos. Estamos aquí para ayudarte y brindarte toda la información que necesites. 
+                        ¡Esperamos saber de ti pronto!
+                    </p>
+
                 </div>
             </div>
         </section>

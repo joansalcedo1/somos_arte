@@ -6,7 +6,7 @@ import Eventos from './section/Eventos'
 import Contactanos from './section/Contactanos'
 import Contacto from './layout/Contacto'
 import Location from './section/Location'
-
+import Footer from './componentsd/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +20,7 @@ function App() {
       <Contactanos/>
       <Contacto/>
       <Location/>
+      <Footer/>
     </>
   )
 }

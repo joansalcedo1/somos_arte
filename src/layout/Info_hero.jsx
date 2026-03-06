@@ -2,8 +2,8 @@ export default function Info_hero() {
     return (
         <>
             <div id="dad_text h-full" className="p-4">
-                <div id="titulo" className="p-4 text-center font-semibold">
-                    <h1 className="text-3xl">Academia artistica somos arte</h1>
+                <div id="titulo" className="py-5 sm:text-4xl md:text-5xl font-extrabold leading-tight text-black  tracking-tighter">
+                    <h1 className="text-center">Academia artistica somos arte</h1>
                 </div>
                 <div className="text-center p-4 font-light">
                     ¡El arte corre por nuestras venas!
