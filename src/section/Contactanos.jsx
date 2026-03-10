@@ -9,8 +9,8 @@ export default function Contactanos() {
     }, [])
     return (
         <section className="h-screen bg-accent-yellow px-20 py-10 ">
-            <div className="grid grid-cols-2 gap-2 h-full relative ">
-                <div className="flex flex-col justify-around sticky self-start top-50">
+            <div className="grid grid-cols-2 gap-2 h-full">
+                <div className="flex flex-col justify-around">
                     <form className="bg-white px-6 py-10 h-2/3 rounded-3xl flex flex-col justify-between  shadow-2xl">
                         <h1 className="text-2xl font-bold mb-4">Contáctanos</h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 ">

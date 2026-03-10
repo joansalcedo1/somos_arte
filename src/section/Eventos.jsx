@@ -4,17 +4,20 @@ import { useMotionValueEvent, useScroll, motion, AnimatePresence } from "framer-
 export default function Eventos() {
     const [isScrolled, setIsScrolled] = useState(false);
     const { scrollY } = useScroll();
+
     useMotionValueEvent(scrollY, 'change', (latest) => {
         setIsScrolled(latest > 50);
     });
+
     const eventos = [
         { titulo: "Esamble musical", descripcion: "Nuestros estudiantes tienen la oportunidad de participar en un ensamble musical, donde pueden tocar juntos y aprender a colaborar como grupo. ", imagen: null },
         { titulo: "Festival de arte", descripcion: "Organizamos un festival de arte anual donde los estudiantes pueden exhibir sus obras de arte. Es una celebración de la creatividad y el talento de nuestros estudiantes", imagen: null },
         { titulo: "Solista", descripcion: "Nuestros estudiantes tienen la oportunidad de presentarse como solistas en nuestro festival permitiendo compartir su talento con un público más amplio.", imagen: null }
     ]
+
     return (
         <>
-            <section className="h-screen relative bg-white grid grid-cols-2 px-20 py-10 gap-6">
+            <section className="h-screen relative bg-white grid grid-cols-2 px-20 py-15 mb-10 gap-6">
                 <div className="grid grid-cols-2 gap-4 p-4">
                     {eventos.map((evento, index) => {
                         // Lógica para el tercer elemento cuando solo hay 3 en total
