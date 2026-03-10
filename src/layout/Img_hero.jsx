@@ -1,6 +1,6 @@
 const ImgHero = () => {
     return (
-        <div className="h-full relative bg-accent-earth rounded-3xl text-white shadow-inner overflow-hidden min-h-[400px]">
+        <div className="h-full relative bg-accent-earth rounded-3xl text-white shadow-inner overflow-hidden min-h-100 me-10">
             {/* Imagen de fondo */}
             <img src="../assets/hero-art.jpg" alt="Academia Somos Arte" className="w-full h-full object-cover opacity-80" />
             

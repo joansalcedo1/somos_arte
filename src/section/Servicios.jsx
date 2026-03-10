@@ -7,7 +7,7 @@ export default function Servicios() {
     const servicios = serviciosData || [];
 
     return (
-        <section className="bg-neutral-50 min-h-screen flex flex-col items-center px-6 md:px-40 py-16">
+        <section className="bg-neutral-50 min-h-screen flex flex-col items-center py-15 px-25 m-10 md:px-40">
             <header className="text-center mb-12">
                 <motion.span
                     initial={{ opacity: 0, y: -10 }}

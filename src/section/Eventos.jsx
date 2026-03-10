@@ -17,7 +17,7 @@ export default function Eventos() {
 
     return (
         <>
-            <section className="h-screen relative bg-white grid grid-cols-2 px-20 py-15 mb-10 gap-6">
+            <section className="h-screen relative bg-white grid grid-cols-2 gap-6 py-15 px-25 m-10">
                 <div className="grid grid-cols-2 gap-4 p-4">
                     {eventos.map((evento, index) => {
                         // Lógica para el tercer elemento cuando solo hay 3 en total
