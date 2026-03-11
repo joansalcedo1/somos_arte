@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import serviciosData from "../data/servicios.json"
+import serviciosData from "../../data/servicios.json";
 
 export default function Contactanos() {
+    //Los servicios se utilizan en el select del formulario :)
     const [servicios, setServicios] = useState(null)
 
     useEffect(() => {

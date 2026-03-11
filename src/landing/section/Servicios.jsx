@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import serviciosData from "../data/servicios.json";
+import serviciosData from "../../data/servicios.json";
 
 export default function Servicios() {
     const [openIndex, setOpenIndex] = useState(0); 
