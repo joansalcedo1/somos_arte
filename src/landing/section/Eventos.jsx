@@ -17,8 +17,8 @@ export default function Eventos() {
 
     return (
         <>
-            <section className="h-screen relative bg-white grid grid-cols-2 gap-6 py-15 px-25 m-10">
-                <div className="grid grid-cols-2 gap-4 p-4">
+            <section className="h-full relative grid grid-cols-2 gap-6 py-15 px-25  bg-white">
+                <div className="grid grid-cols-2 gap-4 mx-10 my-14">
                     {eventos.map((evento, index) => {
                         // Lógica para el tercer elemento cuando solo hay 3 en total
                         const esElTerceroDeTres = eventos.length === 3 && index === 2;
