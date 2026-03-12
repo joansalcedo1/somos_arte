@@ -20,10 +20,10 @@ const MisionVision = () => {
     }
     return (
         <>
-            <section className="relative h-screen  m-18 p-5 flex flex-col ">
+            <section className="relative h-screen  mx-40 my-20 p-5 flex flex-col ">
                 <div className="flex items-center p-4 h-full m-4 rounded-3xl border-3 border-accent-gold shadow-xl">
                     <AnimatePresence mode="wait">
-                        <motion.h4 className="text-6xl font-bold px-10 "
+                        <motion.h4 className="lg:text-6xl font-bold px-10  md:text-3xl  text-neutral-900 leading-none  "
                             key={openIndex}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }} // Se activa al llegar
@@ -35,10 +35,9 @@ const MisionVision = () => {
 
                         </motion.h4>
                     </AnimatePresence>
-                    <div className="absolute bg-accent-gold w-1/2 h-3/4 bottom-1/2 translate-y-1/2 right-0 px-12 ounded-lg text-white rounded-3xl shadow-lg md:text-md">
+                    <div className="absolute bg-accent-gold w-1/3 h-3/4 bottom-1/2 translate-y-1/2 right-0 px-12 text-white rounded-3xl shadow-lg md:text-md lg:text-lg">
                         <div className="flex flex-row px-5 gap-8 items-center justify-center py-2 ">
                             <button onClick={() => cambioInfo(0)} className={`transition-colors py-3 px-9 rounded-2xl h-full font-bold hover:bg-amber-600 hover:cursor-pointer ${openIndex === 0 ? "bg-amber-700" : ""}`}>
-
                                 Mision
                             </button>
 

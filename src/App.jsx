@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Landing from './landing/Landing'
 import Nav from './componentsd/Nav'
-import Contacto from './landing/layout/Contacto'
+import Contacto from './componentsd/Contacto'
 import AboutUs from './AboutUs/AboutUs'
 import ClickSpark from './componentsd/ClickSpark'
+import Footer from './componentsd/Footer'
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/sobreNosotros" element={<AboutUs />} />
           </Routes>
           <Contacto />
+          <Footer/>
         </BrowserRouter>
       </ClickSpark>
     </>
