@@ -25,9 +25,11 @@ function Nav() {
                             Sobre nosotros
                         </div>
                     </NavLink>
+                    <NavLink to="/galeria">
                     <div className="cursor-pointer hover:bg-[#E8B923] hover:text-white rounded px-3 py-2 transition-all duration-300">
                         Galería
                     </div>
+                    </NavLink>
                     <div className="cursor-pointer hover:bg-[#E8B923] hover:text-white rounded px-3 py-2 transition-all duration-300">
                         Servicios
                     </div>

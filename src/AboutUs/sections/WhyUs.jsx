@@ -1,6 +1,7 @@
 import ScrollStack, { ScrollStackItem } from "../../componentsd/ScrollStack";
 import { motion } from "framer-motion";
-
+import CardSwap from "../../componentsd/CardSwap";
+import { Card } from "../../componentsd/CardSwap";
 const VALORES = [
   {
     id: 1,
@@ -10,7 +11,7 @@ const VALORES = [
   },
   {
     id: 2,
-    title: "Scalable", 
+    title: "Scalable",
     desc: "Our platform grows with your needs, ensuring a seamless expansion across different environments.",
     color: "bg-yellow-300"
   },
@@ -33,7 +34,7 @@ function WhyUs() {
           viewport={{ once: true }}
           className="text-accent-gold font-bold tracking-widest uppercase text-xs"
         >
-        ¿Por qué elegirnos?
+          ¿Por qué elegirnos?
         </motion.span>
         <h2 className="text-3xl md:text-4xl font-black text-neutral-900 mt-2 tracking-tighter">
           Nuestros
@@ -41,22 +42,27 @@ function WhyUs() {
         </h2>
       </div>
 
-      <ScrollStack
-        useWindowScroll={true}
-        itemDistance={80}
-        itemStackDistance={10}
-        stackPosition="20%"
-        scaleEndPosition="10%"
-        baseScale={0.85}
-        itemScale={0.03}
-      >
-        {VALORES.map((v) => (
-          <ScrollStackItem key={v.id} itemClassName={`${v.color} min-h-[400px]`}>
-            <h2 className="text-4xl font-bold mb-6">{v.title}</h2>
-            <p className="text-xl">{v.desc}</p>
-          </ScrollStackItem>
-        ))}
-      </ScrollStack>
+      <div className="top-10">
+        <CardSwap
+          cardDistance={60}
+          verticalDistance={70}
+          delay={5000}
+          pauseOnHover={false}
+        >
+          <Card>
+            <h3>Card 1</h3>
+            <p>Your content here</p>
+          </Card>
+          <Card>
+            <h3>Card 2</h3>
+            <p>Your content here</p>
+          </Card>
+          <Card>
+            <h3>Card 3</h3>
+            <p>Your content here</p>
+          </Card>
+        </CardSwap>
+      </div>
     </section>
   );
 }
