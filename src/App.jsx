@@ -5,17 +5,12 @@ import Contacto from './componentsd/Contacto'
 import AboutUs from './AboutUs/AboutUs'
 import ClickSpark from './componentsd/ClickSpark'
 import Footer from './componentsd/Footer'
-function App() {
 
+// App.jsx
+function App() {
   return (
     <>
-      <ClickSpark
-        sparkColor='#000000'
-        sparkSize={10}
-        sparkRadius={15}
-        sparkCount={8}
-        duration={400}
-      >
+      <ClickSpark sparkColor='#000000' sparkSize={10} sparkRadius={15} sparkCount={8} duration={400}>
         <BrowserRouter>
           <Nav />
           <Routes>
@@ -23,11 +18,12 @@ function App() {
             <Route path="/sobreNosotros" element={<AboutUs />} />
           </Routes>
           <Contacto />
-          <Footer/>
+          
         </BrowserRouter>
       </ClickSpark>
+      <Footer />
     </>
-  )
+  );
 }
 
 export default App
