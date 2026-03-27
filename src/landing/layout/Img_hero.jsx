@@ -19,7 +19,7 @@ const ImgHero = () => {
     {
       id: 3,
       alt: "Esta es la academia musical 3",
-      src: "/fotos/piano teach 3.png",
+      src: "/fotos/piano teach 1.png",
     },
   ];
 

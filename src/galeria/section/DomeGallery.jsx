@@ -23,7 +23,7 @@ const DEFAULT_IMAGES = [
     alt: 'Geometric pattern'
   },
   {
-    src: '/fotos/guitar teach.png',
+    src: '/fotos/guitar teach (2).png',
     alt: 'Textured surface'
   },
   {
