@@ -24,11 +24,13 @@ const Nav2 = () => {
                         </div>
                     </NavLink>
                 </div>
+                 <a href="https://www.instagram.com/academia_somosarte/">
                 <div className='flex mx-2 items-center justify-center  px-3 py-2 cursor-pointer my-1 text-white font-bold bg-accent-gold hover:font-bold  hover:bg-accent-earth hover:translate-y-2.5 hover:rounded-2xl rounded-2xl transition-all duration-200'>
-
+                    
                     <p className=''>Contactanos</p>
 
                 </div>
+                </a>
             </nav>
         </section>
     )
