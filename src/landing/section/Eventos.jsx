@@ -1,70 +1,72 @@
-import React, { useState } from "react";
-import { useMotionValueEvent, useScroll, motion, AnimatePresence } from "framer-motion";
+﻿import React from "react";
+import { motion } from "framer-motion";
 
 export default function Eventos() {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const { scrollY } = useScroll();
-
-    useMotionValueEvent(scrollY, 'change', (latest) => {
-        setIsScrolled(latest > 50);
-    });
-
     const eventos = [
-        { titulo: "Esamble musical", descripcion: "Nuestros estudiantes tienen la oportunidad de participar en un ensamble musical, donde pueden tocar juntos y aprender a colaborar como grupo. ", imagen: "/fotos/presentacion.png" },
-        { titulo: "Festival de arte", descripcion: "Organizamos un festival de arte anual donde los estudiantes pueden exhibir sus obras de arte. Es una celebración de la creatividad y el talento de nuestros estudiantes", imagen: "/fotos/arteterapia.png" },
+        { titulo: "Ensamble musical", descripcion: "Nuestros estudiantes tienen la oportunidad de participar en un ensamble musical, donde pueden tocar juntos y aprender a colaborar como grupo.", imagen: "/fotos/presentacion.png" },
+        { titulo: "Festival de arte", descripcion: "Organizamos un festival de arte anual donde los estudiantes pueden exhibir sus obras de arte. Es una celebración de la creatividad y el talento de nuestros estudiantes.", imagen: "/fotos/arteterapia.png" },
         { titulo: "Solista", descripcion: "Nuestros estudiantes tienen la oportunidad de presentarse como solistas en nuestro festival permitiendo compartir su talento con un público más amplio.", imagen: "/fotos/solista.png" }
     ]
 
     return (
-        <>
-            <section className="h-full relative grid grid-cols-2 gap-6 py-15 px-25  bg-white">
-                <div className="grid grid-cols-2 gap-4 mx-10 my-14">
+        <section className="min-h-screen bg-white py-20 px-6 md:px-12 lg:px-24">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                
+                {/* Lado de los Eventos (Grilla de Tarjetas) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 order-2 lg:order-1">
                     {eventos.map((evento, index) => {
-                        // Lógica para el tercer elemento cuando solo hay 3 en total
-                        const esElTerceroDeTres = eventos.length === 3 && index === 2;
-
+                        const esElTercero = index === 2;
                         return (
-                            <div
+                            <motion.div
                                 key={index}
-                                className={`bg-white flex flex-col p-6 rounded-3xl shadow-lg border border-neutral-border transition-all hover:scale-[1.02]
-          ${esElTerceroDeTres ? "col-span-2" : "col-span-1"}`}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className={`bg-white flex flex-col p-6 rounded-[2.5rem] shadow-xl border border-neutral-100 transition-all hover:shadow-2xl hover:-translate-y-1 ${esElTercero ? "md:col-span-2" : "col-span-1"}`}
                             >
-                                {/* Contenedor de imagen o color (Bento Style) */}
-                                <div className="w-full bg-neutral-light rounded-2xl mb-4 overflow-hidden">
-                                    {/* Aquí podrías poner evento.imagen */}
-                                    <img src={evento.imagen} alt="" className="h-full w-full object-cover" />
+                                <div className="w-full aspect-video rounded-[2rem] mb-6 overflow-hidden shadow-inner bg-neutral-50">
+                                    <img src={evento.imagen} alt={evento.titulo} className="h-full w-full object-cover" loading="lazy" />
                                 </div>
 
-                                <div className="flex flex-col flex-1">
-                                    <h3 className="text-xl font-black uppercase tracking-tighter text-[#8B6F47] mb-2">
+                                <div className="flex flex-col flex-1 px-2">
+                                    <h3 className="text-xl font-black uppercase tracking-tight text-accent-gold mb-3">
                                         {evento.titulo}
                                     </h3>
-                                    <p className="text-neutral-gray text-sm leading-relaxed text-balance">
+                                    <p className="text-neutral-600 text-sm leading-relaxed font-medium">
                                         {evento.descripcion}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>
-                <div className="p-5 sticky self-start top-40 h-fit">
-                    <p className=" text-sm font-light font-sans">Conoce nuestros eventos</p>
-                    <div className="py-5 sm:text-4xl md:text-5xl font-extrabold leading-tight text-neutral-dark uppercase tracking-tighter ">
-                        <h2 className="">
-                            Tus hijos
-                        </h2>
-                        <span className=" bg-gradient-to-r from-[#FCB900] to-[#D4AF37] bg-clip-text text-transparent">
+
+                {/* Lado del Texto (Sticky en Desktop) */}
+                <div className="lg:sticky lg:top-32 h-fit order-1 lg:order-2 text-center lg:text-left">
+                    <span className="text-accent-gold font-bold tracking-widest uppercase text-xs block mb-4">Conoce nuestros eventos</span>
+                    <div className="text-4xl md:text-6xl font-black leading-none text-neutral-900 uppercase tracking-tighter mb-8">
+                        <h2>Tus hijos</h2>
+                        <span className="bg-gradient-to-r from-accent-gold to-amber-600 bg-clip-text text-transparent">
                             podrán presentarse a grandes públicos
                         </span>
                     </div>
-                    <p>
-                        Subirse a un escenario otorga a los niños una voz propia. Les enseña a ocupar un espacio,
-                        a proyectar seguridad y a entender que su talento tiene un impacto en la comunidad.
-                        Es el laboratorio perfecto para formar los líderes del mañana, capaces de conectar con
-                        las personas de forma auténtica.
-                    </p>
+                    <div className="space-y-6 text-lg text-neutral-600 leading-relaxed font-medium max-w-xl mx-auto lg:mx-0">
+                        <p>
+                            Subirse a un escenario otorga a los niños una voz propia. Les enseña a ocupar un espacio,
+                            a proyectar seguridad y a entender que su talento tiene un impacto en la comunidad.
+                        </p>
+                        <p className="hidden md:block">
+                            Es el laboratorio perfecto para formar los líderes del mañana, capaces de conectar con
+                            las personas de forma auténtica.
+                        </p>
+                    </div>
+                    
+                    <div className="mt-10 flex justify-center lg:justify-start">
+                        <div className="w-20 h-1 bg-accent-gold rounded-full"></div>
+                    </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     )
 }

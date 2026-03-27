@@ -5,9 +5,9 @@ import TextoEscrito from "../../componentsd/TextoEscrito";
 
 function Nosotros() {
     return (
-        <section className="min-h-screen bg-neutral-900 rounded-3xl relative bg-[url('/fotos/equipo_somosarte.png')] bg-cover bg-center overflow-hidden">
+        <section className="min-h-screen bg-neutral-900  relative bg-[url('/fotos/equipo_somosarte.png')] bg-cover bg-center overflow-hidden">
             {/* Capa de superposicion para legibilidad del texto */}
-            <div className="absolute inset-0 bg-black/50 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-black/50 "></div>
 
             <div className="relative grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen items-center z-10 px-6 md:px-16 py-20 lg:py-0">
 

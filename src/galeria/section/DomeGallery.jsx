@@ -7,7 +7,7 @@ const DEFAULT_IMAGES = [
     alt: 'Abstract art'
   },
   {
-    src: '/fotos/piano teach.png',
+    src: '/fotos/piano teach 1.png',
     alt: 'Modern sculpture'
   },
   {
