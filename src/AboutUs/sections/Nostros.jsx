@@ -4,12 +4,7 @@ import { motion, MotionConfig } from "framer-motion";
 import TextoEscrito from "../../componentsd/TextoEscrito";
 function Nosotros() {
     return (
-        <section className="min-h-screen bg-neutral-300 mx-5 rounded-3xl relative">
-            <div className="absolute top-1/2 left-1/2">
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="gray">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-            </div>
+        <section className="min-h-screen bg-neutral-300  rounded-3xl relative bg-[url('/fotos/equipo_somosarte.png')] bg-cover bg-center">
             <div className="relative grid grid-cols-1 md:grid-cols-2 w-full items-center bg-cover bg-center rounded-3xl">
 
                 {/* Columna izquierda */}
@@ -19,18 +14,17 @@ function Nosotros() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="font-bold text-2xl"
+                        className="font-bold text-lg"
                     >
-                        Nosotros
-                    </motion.span>
-                    <motion.span
-                        initial={{ opacity: 0, y: -10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        viewport={{ once: true }}
-                        className="font-bold text-2xl"
-                    >
-                        Conoce sobre nuestra historia
+                        <div id="dad_text h-full" className="p-4">
+                            <div className="text-center p-4 text-sm font-bold text-accent-gold bg-accent-earth mx-60 rounded-2xl">
+                                ¡El arte corre por nuestras venas!
+                            </div>
+                            <div id="titulo" className="text-4xl md:text-5xl font-black text-white mt-2 tracking-tighter">
+                                <h1 className="text-center">Academia artistica somos arte</h1>
+                            </div>
+
+                        </div>
                     </motion.span>
                 </div>
 
@@ -41,22 +35,25 @@ function Nosotros() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="font-bold text-2xl"
+                        className="text-lg md:text-lg text-accent-gold bg-accent-earth mx-60 rounded-2xl font-bold tracking-tighter"
                     >
-                        Somos arte
+                        <p className="text-center">Conoce sobre nuestra historia</p>
                     </motion.span>
-
-                    <TextoEscrito
-                        texto="Somos Arte nació el 9 de junio de 2009 como la materialización de un sueño compartido: Sembrar el amor por la cultura en el corazón de Candelaria. Lo que comenzó como un grupo de profesionales apasionados por la danza, la música y las artes plásticas, evolucionó en una misión de vida."
-                        className="text-base leading-relaxed"
-                        duration={0.008}
-                    />
-
-                    <TextoEscrito
-                        texto="En 2011, impulsados por el deseo de expandir nuestro impacto, nos trasladamos a Cali. Nuestra visión trascendió la enseñanza para convertirnos en una fundación artística dedicada a fortalecer el tejido social del Valle del Cauca a través del arte."
-                        className="text-base leading-relaxed"
-                        duration={0.03}
-                    />
+                    <div className=" p-3 rounded-2xl">
+                        <TextoEscrito
+                            texto="Somos Arte nació el 9 de junio de 2009 como la materialización de un sueño compartido: Sembrar el amor por la cultura en el corazón de Candelaria. Lo que comenzó como un grupo de profesionales apasionados por la danza, la música y las artes plásticas, evolucionó en una misión de vida."
+                            className="text-base leading-relaxed text-white"
+                            duration={0.008}
+                        />
+                    </div>
+                    <div className=" p-3 rounded-2xl">
+                        <TextoEscrito
+                            texto="En 2011, impulsados por el deseo de expandir nuestro impacto, nos trasladamos a Cali. Nuestra visión 
+          trascendió la enseñanza para convertirnos en una fundación artística dedicada a fortalecer el tejido social del Valle del Cauca a través del arte."
+                            className="text-base leading-relaxed text-white "
+                            duration={0.03}
+                        />
+                    </div>
                 </div>
                 <div className="absolute top-150 left-1/2 -translate-x-1/2">
                     <motion.div

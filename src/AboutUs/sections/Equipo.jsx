@@ -7,43 +7,43 @@ const Equipo = () => {
             name: "Marcela Herrera",
             role: "Directora somos arte",
             description: "Licenciada en música de la Universidad del Valle. Se desempeña como docente de guitarra, teclado y técnica vocal. Integrante de Reales Trío.",
-            image: "https://previews.123rf.com/images/whiteshoes91/whiteshoes911802/whiteshoes91180200173/96147813-people-sport-4k-emotions-natural-and-lifestyle-concept-portrait-of-pretty-cute-girl-smiling.jpg"
+            image: "/fotos/directora.png"
         },
         {
             name: "Yudy Andra Gomez Arcila",
             role: "Directora somos arte",
             description: "Diseñadora gráfica y escritora. Autora de varios libros de poemas y educación. Tallerista del programa de expresión escrita.",
-            image: "https://previews.123rf.com/images/whiteshoes91/whiteshoes911802/whiteshoes91180200173/96147813-people-sport-4k-emotions-natural-and-lifestyle-concept-portrait-of-pretty-cute-girl-smiling.jpg"
+            image: "/fotos/diseñadora_grafica.png"
         },
         {
             name: "Hernando Gomez Rios",
             role: "Docente de música",
             description: "Músico profesional experto en formación de grupos vocales. Director del grupo Reales Trío y tallerista de guitarra.",
-            image: "https://previews.123rf.com/images/whiteshoes91/whiteshoes911802/whiteshoes91180200173/96147813-people-sport-4k-emotions-natural-and-lifestyle-concept-portrait-of-pretty-cute-girl-smiling.jpg"
+            image: "/fotos/guitarrista.png"
         },
         {
             name: "Diana Fernanda Gómez",
             role: "Psicóloga y tallerista",
             description: "Psicóloga con experiencia en proyectos de intervención social. Coordinadora de programas y orientadora en la academia.",
-            image: "https://previews.123rf.com/images/whiteshoes91/whiteshoes911802/whiteshoes91180200173/96147813-people-sport-4k-emotions-natural-and-lifestyle-concept-portrait-of-pretty-cute-girl-smiling.jpg"
+            image: "/fotos/psicologa.png"
         },
         {
             name: "Dario",
             role: "Docente de Percusión",
             description: "Especialista en percusión folclórica y contemporánea, con gran experiencia en la formación de ritmos tradicionales.",
-            image: "https://previews.123rf.com/images/whiteshoes91/whiteshoes911802/whiteshoes91180200173/96147813-people-sport-4k-emotions-natural-and-lifestyle-concept-portrait-of-pretty-cute-girl-smiling.jpg"
+            image: "/fotos/percusion.png"
         },
         {
             name: "Samuel",
-            role: "Docente de Percusión",
-            description: "Experto en percusión latina y batería, apasionado por transmitir la energía del ritmo a través de la práctica grupal.",
-            image: "https://previews.123rf.com/images/whiteshoes91/whiteshoes911802/whiteshoes91180200173/96147813-people-sport-4k-emotions-natural-and-lifestyle-concept-portrait-of-pretty-cute-girl-smiling.jpg"
+            role: "Docente de piano",
+            description: "Experto en piano latina y batería, apasionado por transmitir la energía del ritmo a través de la práctica grupal.",
+            image: "/fotos/pianista.png"
         },
         {
             name: "Amelia",
             role: "Docente de Violín",
             description: "Violinista con formación clásica, dedicada a despertar la sensibilidad musical en niños y jóvenes mediante el violín.",
-            image: "https://previews.123rf.com/images/whiteshoes91/whiteshoes911802/whiteshoes91180200173/96147813-people-sport-4k-emotions-natural-and-lifestyle-concept-portrait-of-pretty-cute-girl-smiling.jpg"
+            image: "/fotos/violin.png"
         }
     ];
 

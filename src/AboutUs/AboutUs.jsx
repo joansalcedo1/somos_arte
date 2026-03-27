@@ -12,7 +12,6 @@ const AboutUs = () => {
             <MisionVision/>
             <Equipo />
             <WhyUs />
-            <Prueba/>
         </>
     )
 }

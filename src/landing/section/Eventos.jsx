@@ -10,9 +10,9 @@ export default function Eventos() {
     });
 
     const eventos = [
-        { titulo: "Esamble musical", descripcion: "Nuestros estudiantes tienen la oportunidad de participar en un ensamble musical, donde pueden tocar juntos y aprender a colaborar como grupo. ", imagen: null },
-        { titulo: "Festival de arte", descripcion: "Organizamos un festival de arte anual donde los estudiantes pueden exhibir sus obras de arte. Es una celebración de la creatividad y el talento de nuestros estudiantes", imagen: null },
-        { titulo: "Solista", descripcion: "Nuestros estudiantes tienen la oportunidad de presentarse como solistas en nuestro festival permitiendo compartir su talento con un público más amplio.", imagen: null }
+        { titulo: "Esamble musical", descripcion: "Nuestros estudiantes tienen la oportunidad de participar en un ensamble musical, donde pueden tocar juntos y aprender a colaborar como grupo. ", imagen: "/fotos/presentacion.png" },
+        { titulo: "Festival de arte", descripcion: "Organizamos un festival de arte anual donde los estudiantes pueden exhibir sus obras de arte. Es una celebración de la creatividad y el talento de nuestros estudiantes", imagen: "/fotos/arteterapia.png" },
+        { titulo: "Solista", descripcion: "Nuestros estudiantes tienen la oportunidad de presentarse como solistas en nuestro festival permitiendo compartir su talento con un público más amplio.", imagen: "/fotos/solista.png" }
     ]
 
     return (
@@ -30,9 +30,9 @@ export default function Eventos() {
           ${esElTerceroDeTres ? "col-span-2" : "col-span-1"}`}
                             >
                                 {/* Contenedor de imagen o color (Bento Style) */}
-                                <div className="w-full h-32 bg-neutral-light rounded-2xl mb-4 overflow-hidden">
+                                <div className="w-full bg-neutral-light rounded-2xl mb-4 overflow-hidden">
                                     {/* Aquí podrías poner evento.imagen */}
-                                    <div className="w-full h-full bg-gradient-to-br from-[#FDD835]/20 to-[#D4AF37]/20" />
+                                    <img src={evento.imagen} alt="" className="h-full w-full object-cover" />
                                 </div>
 
                                 <div className="flex flex-col flex-1">

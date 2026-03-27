@@ -64,7 +64,7 @@ const Footer = () => {
             {/* BARRA INFERIOR: LEGAL */}
             <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-neutral-500 font-medium">
                 <p>&copy; {currentYear} Academia Artística Somos Arte. Todos los derechos reservados.</p>
-                <p>Desarrollado por Joan Sebastian Salcedo</p>
+                <p>Desarrollado por <a href="https://xendigital.co/">XEN digital</a></p>
             </div>
         </footer>
     );
