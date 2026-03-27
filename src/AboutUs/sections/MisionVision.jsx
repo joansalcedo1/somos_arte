@@ -21,10 +21,10 @@ const MisionVision = () => {
     }
     return (
         <>
-            <section className="relative h-screen  mx-40 my-20 p-5 flex flex-col ">
-                <div className="flex items-center p-4 h-full m-4 rounded-3xl border-3 border-accent-gold shadow-xl">
-                    <div className="mt-auto w-full group relative">
-                        <div className="aspect-video bg-neutral-50 rounded-[2rem] flex items-center justify-center border-2 border-dashed border-neutral-200 overflow-hidden">
+            <section className="relative min-h-screen mx-4 md:mx-40 my-20 p-5 flex flex-col">
+                <div className="flex flex-col lg:flex-row items-center p-4 min-h-[600px] m-4 rounded-3xl border-3 border-accent-gold shadow-xl bg-white">
+                    <div className="w-full lg:w-2/3 group relative">
+                        <div className="aspect-video bg-neutral-50 rounded-[2rem] flex items-center justify-center border-2 border-dashed border-neutral-200 overflow-hidden relative">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={openIndex}

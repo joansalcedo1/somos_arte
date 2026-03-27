@@ -3,6 +3,7 @@ import MisionVision from "./sections/MisionVision";
 import Equipo from "./sections/Equipo";
 import WhyUs from "./sections/WhyUs";
 import Metodologia from "./sections/Metodologia";
+import Prueba from "./sections/Prubea"
 const AboutUs = () => {
 
     return (
@@ -10,8 +11,8 @@ const AboutUs = () => {
             <Nosotros />
             <MisionVision/>
             <Equipo />
-            <WhyUs/>
-            <Metodologia/>
+            <WhyUs />
+            <Prueba/>
         </>
     )
 }

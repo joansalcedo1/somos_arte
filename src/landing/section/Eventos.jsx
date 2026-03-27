@@ -26,7 +26,7 @@ export default function Eventos() {
                         return (
                             <div
                                 key={index}
-                                className={`bg-white flex flex-col p-6 rounded-3xl shadow-lg border border-slate-100 transition-all hover:scale-[1.02]
+                                className={`bg-white flex flex-col p-6 rounded-3xl shadow-lg border border-neutral-border transition-all hover:scale-[1.02]
           ${esElTerceroDeTres ? "col-span-2" : "col-span-1"}`}
                             >
                                 {/* Contenedor de imagen o color (Bento Style) */}

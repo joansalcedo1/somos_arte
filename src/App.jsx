@@ -21,10 +21,10 @@ function App() {
             <Route path="/galeria" element ={<Galeria />} />
           </Routes>
           <Contacto />
-          
+          <Footer/>
         </BrowserRouter>
       </ClickSpark>
-      <Footer />
+     
     </>
   );
 }

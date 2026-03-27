@@ -5,63 +5,73 @@ import { Card } from "../../componentsd/CardSwap";
 const VALORES = [
   {
     id: 1,
-    title: "Safe",
-    desc: "The combination of advanced AI and neural simulation sets a new standard for the entire industry.",
-    color: "bg-yellow-400"
+    title: "Creatividad",
+    desc: "Fomentamos la libre expresión y el desarrollo del pensamiento creativo en cada estudiante.",
+    color: "bg-accent-primary"
   },
   {
     id: 2,
-    title: "Scalable",
-    desc: "Our platform grows with your needs, ensuring a seamless expansion across different environments.",
-    color: "bg-yellow-300"
+    title: "Pasión",
+    desc: "Transmitimos el amor por el arte como motor fundamental para el aprendizaje y la excelencia.",
+    color: "bg-accent-yellow"
   },
   {
     id: 3,
-    title: "Practical",
-    desc: "Built for the real world, focusing on immediate impact and efficient autonomous transportation.",
-    color: "bg-yellow-200"
+    title: "Formación Integral",
+    desc: "Buscamos el desarrollo no solo artístico, sino también humano y espiritual de nuestros jóvenes.",
+    color: "bg-accent-gold"
   }
 ];
 
 function WhyUs() {
   return (
-    <section>
-      {/* Header con z-index explícito para no ser afectado por el stacking context del ScrollStack */}
-      <div className="relative z-10 text-center py-20 px-6">
-        <motion.span
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-accent-gold font-bold tracking-widest uppercase text-xs"
-        >
-          ¿Por qué elegirnos?
-        </motion.span>
-        <h2 className="text-3xl md:text-4xl font-black text-neutral-900 mt-2 tracking-tighter">
-          Nuestros
-          <span className="text-accent-earth-dark"> Valores fundamentales </span>
-        </h2>
-      </div>
+    <section className="relative min-h-screen py-20 bg-neutral-light overflow-hidden flex items-center">
+      <div className="max-w-7xl mx-auto px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+        
+        {/* Lado Izquierdo: Cards */}
+        <div className="order-2 lg:order-1 flex justify-center items-center relative min-h-[500px]">
+          <CardSwap
+            cardDistance={30}
+            verticalDistance={30}
+            delay={5000}
+            pauseOnHover={false}
+            width={400}
+            height={300}
+          >
+            {VALORES.map((v) => (
+              <Card key={v.id}>
+                <div className={`w-full h-full ${v.color} p-8 flex flex-col justify-center items-center text-center rounded-3xl shadow-2xl border-2 border-white`}>
+                  <h3 className="text-2xl font-black text-neutral-dark mb-4 uppercase">{v.title}</h3>
+                  <p className="text-neutral-dark font-medium leading-relaxed">{v.desc}</p>
+                </div>
+              </Card>
+            ))}
+          </CardSwap>
+        </div>
 
-      <div className="top-10">
-        <CardSwap
-          cardDistance={60}
-          verticalDistance={70}
-          delay={5000}
-          pauseOnHover={false}
-        >
-          <Card>
-            <h3>Card 1</h3>
-            <p>Your content here</p>
-          </Card>
-          <Card>
-            <h3>Card 2</h3>
-            <p>Your content here</p>
-          </Card>
-          <Card>
-            <h3>Card 3</h3>
-            <p>Your content here</p>
-          </Card>
-        </CardSwap>
+        {/* Lado Derecho: Titulo */}
+        <div className="order-1 lg:order-2 text-center lg:text-right">
+          <motion.span
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-accent-gold font-bold tracking-widest uppercase text-xs"
+          >
+            ¿Por qué elegirnos?
+          </motion.span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-neutral-900 mt-4 tracking-tighter leading-none">
+            Nuestros
+            <br />
+            <span className="text-accent-earth-dark">Valores</span>
+            <br />
+            fundamentales
+          </h2>
+          <p className="mt-6 text-neutral-gray text-lg max-w-md ml-auto">
+            En Somos Arte, creemos que cada niño es un artista en potencia. 
+            Nuestra metodología se basa en pilares que transforman vidas.
+          </p>
+        </div>
+
       </div>
     </section>
   );
